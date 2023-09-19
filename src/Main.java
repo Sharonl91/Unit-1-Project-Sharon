@@ -1,16 +1,33 @@
-import.java.util
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner s = new Scanner(System.in);
+        double tipTotal;
+        double total;
+        double tipEach;
+        double totalEach;
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.print("Enter your total bill: ");
+        String bill = s.nextLine();
+        double billNew = Double.parseDouble(bill);
+        System.out.print("Enter the tip percentage (as a whole number): ");
+        String tipPercent = s.nextLine();
+        int tipPercentNew = Integer.parseInt(tipPercent);
+        System.out.print("Enter the number of people in your party: ");
+        String people = s.nextLine();
+        int peopleNew = Integer.parseInt(people);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        tipTotal = (Math.round(billNew * tipPercentNew));
+        tipTotal /= 100;
+        total = (Math.round(tipTotal + billNew));
+        total = (Math.round(tipTotal + billNew));
+        tipEach = (Math.round(tipTotal / peopleNew));
+        tipEach = (Math.round(tipTotal / peopleNew));
+        totalEach = (Math.round(total / peopleNew);
+        totalEach = (Math.round(total / peopleNew);
+        System.out.println("The total tip amount is: " +tipTotal);
+        System.out.println("The total bill including tip is: " +total);
+        System.out.println("The tip per person is: " +tipEach);
+        System.out.println("The total per person is: " +totalEach);
     }
 }
